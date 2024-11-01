@@ -10,13 +10,13 @@ public class StudentTests
         // Arrange
         Student student = new()
         {
-            StudentName = new FullName("Billy", "Jean")
+            PersonName = new FullName("Billy", "Jean")
         };
 
         // Act
 
         // Assert
-        Assert.Equal(new FullName("Billy", "Jean"), student.StudentName);
+        Assert.Equal(new FullName("Billy", "Jean"), student.PersonName);
     }
 
     //[Fact]

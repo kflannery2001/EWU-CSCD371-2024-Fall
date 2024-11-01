@@ -12,7 +12,7 @@ public class StorageTests
         var student = new Student
         {
             StudentId = 1,
-            StudentName = new FullName("Kevin", "Flannery")
+            PersonName = new FullName("Kevin", "Flannery")
         };
 
         // Act
@@ -30,7 +30,7 @@ public class StorageTests
         var employee = new Employee
         {
             EmployeeId = 1,
-            EmployeeFullName = new FullName("Kevin", "Flannery"),
+            PersonName = new FullName("Kevin", "Flannery"),
             EmployeeJobTitle = "Software Engineer"
         };
 
@@ -67,7 +67,7 @@ public class StorageTests
         var student = new Student
         {
             StudentId = 1,
-            StudentName = new FullName("Kevin", "Flannery")
+            PersonName = new FullName("Kevin", "Flannery")
         };
         storage.Add(student);
 
@@ -86,7 +86,7 @@ public class StorageTests
         var employee = new Employee
         {
             EmployeeId = 1,
-            EmployeeFullName = new FullName("Kevin", "Flannery"),
+            PersonName = new FullName("Kevin", "Flannery"),
             EmployeeJobTitle = "Software Engineer"
         };
         storage.Add(employee);
@@ -125,7 +125,7 @@ public class StorageTests
         var student = new Student
         {
             StudentId = 1,
-            StudentName = new FullName("Kevin", "Flannery")
+            PersonName = new FullName("Kevin", "Flannery")
         };
         storage.Add(student);
 
@@ -144,7 +144,7 @@ public class StorageTests
         var employee = new Employee
         {
             EmployeeId = 1,
-            EmployeeFullName = new FullName("Kevin", "Flannery"),
+            PersonName = new FullName("Kevin", "Flannery"),
             EmployeeJobTitle = "Software Engineer"
         };
         storage.Add(employee);

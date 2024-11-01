@@ -2,7 +2,7 @@
 
 namespace Logger;
 
-public record class Employee : BaseEntity
+public record class Employee : Person
 {
     // We used explicit implementation for the Name property becuase we need to be able to take Name and parse
     // it into the EmployeeId, EmployeeFullName, and EmployeeJobTitle properties. We also need to be able to
@@ -11,7 +11,7 @@ public record class Employee : BaseEntity
     {
         get
         {
-            return $"{EmployeeId}: {EmployeeFullName}: {EmployeeJobTitle}";
+            return $"{EmployeeId}: {PersonName}: {EmployeeJobTitle}";
         }
         set
         {
@@ -29,11 +29,11 @@ public record class Employee : BaseEntity
 
             if (studentNames.Length == 2)
             {
-                EmployeeFullName = new FullName(studentNames[0], studentNames[1]);
+                PersonName = new FullName(studentNames[0], studentNames[1]);
             }
             else if (studentNames.Length == 3)
             {
-                EmployeeFullName = new FullName(studentNames[0], studentNames[1], studentNames[2]);
+                PersonName = new FullName(studentNames[0], studentNames[1], studentNames[2]);
             }
             else
             {
@@ -45,9 +45,6 @@ public record class Employee : BaseEntity
     }
 
     public int EmployeeId { get; set; }
-
-    // TODO: Refactor Common Members between Student and Employee
-    public FullName EmployeeFullName { get; set; }
 
     private string? _employeeJobTitle;
     public string EmployeeJobTitle
